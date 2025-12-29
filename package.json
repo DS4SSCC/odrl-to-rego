@@ -1,0 +1,52 @@
+{
+  "name": "@ds4sscc/odrl-to-rego",
+  "version": "0.1.0",
+  "description": "Translate ODRL policies to Rego modules (OPA) with helper libraries and mapping-based generation. [WIP]",
+  "license": "MIT",
+  "author": "DS4SSCC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DS4SSCC/odrl-to-rego.git"
+  },
+  "keywords": [
+    "odrl",
+    "opa",
+    "rego",
+    "policy",
+    "dataspaces"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "mapping.json",
+    "helpers"
+  ],
+  "bin": {
+    "odrl-to-rego": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0",
+    "vite-plugin-static-copy": "^2.0.0",
+    "vitest": "^2.0.0"
+  },
+  "dependencies": {
+    "@ds4sscc/node-odrl": "^1.0.0"
+  }
+}

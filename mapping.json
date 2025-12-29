@@ -1,0 +1,22 @@
+{
+  "action": {
+    "regoPackage": "odrl.helpers.action",
+    "method": "match",
+    "args": ["input.action", "%s"]
+  },
+  "target": {
+    "regoPackage": "odrl.helpers.target",
+    "method": "match",
+    "args": ["input.resource", "%s"]
+  },
+  "assignee": {
+    "regoPackage": "odrl.helpers.assignee",
+    "method": "match",
+    "args": ["input.subject", "%s"]
+  },
+  "constraint": {
+    "regoPackage": "odrl.helpers.operator",
+    "method": "eval",
+    "args": ["%s", "%s", "%s"]
+  }
+}

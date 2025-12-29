@@ -1,0 +1,19 @@
+{
+  "@context": "http://www.w3.org/ns/odrl.jsonld",
+  "@type": "Agreement",
+  "uid": "time-limited-access",
+  "permission": [
+    {
+      "assignee": "urn:user:bob",
+      "target": "urn:data:dataset2",
+      "action": "read",
+      "constraint": [
+        {
+          "leftOperand": "hour",
+          "operator": "lt",
+          "rightOperand": 18
+        }
+      ]
+    }
+  ]
+}

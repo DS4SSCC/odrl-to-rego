@@ -1,0 +1,12 @@
+{
+  "@context": "http://www.w3.org/ns/odrl.jsonld",
+  "@type": "Set",
+  "uid": "simple-read-policy",
+  "permission": [
+    {
+      "assignee": "urn:user:alice",
+      "target": "urn:data:dataset1",
+      "action": "read"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    {
+      "duc": "https://w3id.org/idsa/core/"
+    }
+  ],
+  "@type": "Agreement",
+  "uid": "ml-training-policy",
+  "permission": [
+    {
+      "assignee": "urn:org:consumer-a",
+      "target": "urn:data:customer-dataset",
+      "action": "duc:Train"
+    }
+  ],
+  "prohibition": [
+    {
+      "assignee": "urn:org:consumer-a",
+      "target": "urn:data:customer-dataset",
+      "action": "duc:Publish"
+    }
+  ]
+}

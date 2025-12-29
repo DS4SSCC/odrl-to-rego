@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generateRegoModule > generates stable rego for a simple permission 1`] = `
+"package odrl.generated
+
+import data.odrl.helpers.action
+import data.odrl.helpers.assignee
+import data.odrl.helpers.target
+
+# Generated from ODRL policy uid=simple-read-policy
+
+
+
+allow_simple_read_policy_0 if {
+  odrl.helpers.action.match(input.action, "read")
+  odrl.helpers.target.match(input.resource, "urn:data:dataset1")
+  odrl.helpers.assignee.match(input.subject, "urn:user:alice")
+}
+
+default allow = false
+default deny = false
+
+
+
+allow if {
+  allow_simple_read_policy_0
+}"
+`;
