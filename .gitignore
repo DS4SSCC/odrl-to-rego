@@ -143,3 +143,4 @@ vite.config.ts.timestamp-*
 .vscode
 node_modules
 .DS_Store
+*.snap
